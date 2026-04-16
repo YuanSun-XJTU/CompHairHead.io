@@ -1,11 +1,304 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>CompHairHead</title>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>CompHairHead</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
-<body style="text-align:center; margin-top:100px; font-family:Arial;">
-    <h1>🚧 Under Construction 🚧</h1>
-    <p>Our project page is coming soon.</p>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">One-shot Compositional 3D Head Avatars with Deformable Hair</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Yuan Sun<sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://xuanwangvc.github.io/" target="_blank">Xuan Wang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                WeiLi Zhang<sup>1</sup>
+              </span>,</span>
+              <span class="author-block">
+                Wenxuan Zhang<sup>1</sup>
+              </span>,</span>
+              <span class="author-block">
+                <a href="https://yuguo-xjtu.github.io/" target="_blank">Yu Guo</a><sup>*,1</sup>
+              </span>,</span>
+              <span class="author-block">
+                Fei Wang<sup>1</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup> Xi'an Jiaotong University &nbsp;&nbsp;&nbsp;
+                <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Author</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://yuansun-xjtu.github.io/CompHairHead.io/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/YuanSun-XJTU/CompHairHead"
+                    class="external-link button is-normal is-rounded is-dark"
+                    style="pointer-events: none; opacity: 0.5;">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="hero-body">
+          <img src="static/images/teaser.svg" style="display: block; margin: 0 auto; width: 100%;">
+        </div>
+        <p>We introduce a novel method that reconstructs decoupled 3D Gaussian head avatars from a single input image.
+          These avatars support effortless hairstyle transfer and enable real-time rendering from arbitrary viewpoints
+          and facial expressions, featuring natural dynamic hair motion.</p>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We propose a compositional method for constructing a complete 3D head avatar from a single image. Prior
+              one-shot holistic approaches frequently fail to produce realistic hair dynamics during animation, largely
+              due to inadequate decoupling of hair from the facial region, resulting in entangled geometry and unnatural
+              deformations. Our method explicitly decouples hair from the face, modeling these components using distinct
+              deformation paradigms while integrating them into a unified rendering pipeline. Furthermore, by leveraging
+              image-to-3D lifting techniques, we preserve fine-grained textures from the input image to the greatest
+              extent possible, effectively mitigating the common issue of high-frequency information loss in generalized
+              models.
+              Specifically, given a frontal portrait image, we first perform hair removal to obtain a bald image. Both
+              the original image and the bald image are then lifted to dense, detail-rich 3D Gaussian Splatting (3DGS)
+              representations. For the bald 3DGS, we rig it to a FLAME mesh via non-rigid registration with a prior
+              model, enabling natural deformation that follows the mesh triangles during animation. For the hair
+              component, we employ semantic label supervision combined with a boundary-aware reassignment strategy to
+              extract a clean and isolated set of hair Gaussians.
+              To control hair deformation, we introduce a cage structure that supports Position-Based Dynamics (PBD)
+              simulation, allowing realistic and physically plausible transformations of the hair Gaussian primitives
+              under head motion, gravity, and inertial effects. Striking qualitative results, including dynamic
+              animations under diverse head motions, gravity effects, and expressions, showcase substantially more
+              realistic hair behavior alongside faithfully preserved facial details, outperforming state-of-the-art
+              one-shot methods in perceptual realism.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- pipeline -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+
+        <h2 class="title is-3">Pipeline</h2>
+
+        <!-- 左右布局 -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
+
+          <!-- 左：图片 -->
+          <div style="flex: 1;">
+            <img src="static/images/framework.svg" style="width: 100%; max-width: 700px;">
+          </div>
+
+          <!-- 右：视频 -->
+          <div style="flex: 1;">
+            <video controls autoplay loop muted style="width: 100%; max-width: 550px;">
+              <source src="static/videos/part2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+
+        <!-- 描述 -->
+        <p style="margin-top: 20px;">
+          Given a single frontal image, we explicitly decouple hair and bald face components for separate
+          reconstruction using 3DGS. The bald part is lifted to 3DGS and rigged to a parametric FLAME mesh via non-rigid
+          registration for natural expression-driven deformation. The hair Gaussians are isolated and enclosed in a cage
+          structure that supports Position-Based Dynamics (PBD) simulation for physically plausible motion under head
+          pose, gravity, and inertia. Both components are seamlessly integrated into a unified rendering and animation
+          pipeline, enabling coherent and realistic full-head driving.
+        </p>
+
+      </div>
+    </div>
+  </section>
+  <!-- pipeline -->
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Compositional Reconstruction</h2>
+        <video poster="" id="teaser" autoplay controls muted loop height="100%"
+          style="width: 60%; display: block; margin: 10px auto;">
+          <!-- Your video here -->
+          <source src="static/videos/part3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Driving results</h2>
+        <video poster="" id="teaser" autoplay controls muted loop height="100%"
+          style="width: 60%; display: block; margin: 10px auto;">
+          <!-- Your video here -->
+          <source src="static/videos/part4_1.mp4" type="video/mp4">
+        </video>
+        <video poster="" id="teaser" autoplay controls muted loop height="100%"
+          style="width: 60%; display: block; margin: 10px auto;">
+          <!-- Your video here -->
+          <source src="static/videos/part4_2.mp4" type="video/mp4">
+        </video>
+        <video poster="" id="teaser" autoplay controls muted loop height="100%"
+          style="width: 60%; display: block; margin: 10px auto;">
+          <!-- Your video here -->
+          <source src="static/videos/part4_3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Ablation Study</h2>
+        <video poster="" id="teaser" autoplay controls muted loop height="100%"
+          style="width: 60%; display: block; margin: 10px auto;">
+          <!-- Your video here -->
+          <source src="static/videos/part5_1.mp4" type="video/mp4">
+        </video>
+        <video poster="" id="teaser" autoplay controls muted loop height="100%"
+          style="width: 60%; display: block; margin: 10px auto;">
+          <!-- Your video here -->
+          <source src="static/videos/part5_2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!--BibTex citation -->
+  <section class=" section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        NAN
+      </code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
 </body>
+
 </html>
